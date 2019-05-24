@@ -1,0 +1,1671 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <element xsi:type="node">
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">节点0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">0</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">2200.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">7000.0</value>
+        </property>
+    </element>
+    <element xsi:type="node">
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">4600.0</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">节点1</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">7000.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">1</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+    </element>
+    <element xsi:type="node">
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">7400.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">节点2</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">6800.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">2</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+    </element>
+    <element xsi:type="node">
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">节点3</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">3</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">10600.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">6800.0</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+    </element>
+    <element xsi:type="node">
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">13800.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">6600.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">4</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">节点4</value>
+        </property>
+    </element>
+    <element xsi:type="node">
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">5</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">1800.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点5</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4200.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper">
+                <keyValueProperty>
+                    <key>AAA</key>
+                    <value xsi:type="xs:string">AAA:BBB</value>
+                </keyValueProperty>
+            </value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+    </element>
+    <element xsi:type="node">
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4400.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">6</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">4600.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点6</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+    </element>
+    <element xsi:type="node">
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">7400.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4400.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">7</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点7</value>
+        </property>
+    </element>
+    <element xsi:type="node">
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">10400.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点8</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4000.0</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">8</value>
+        </property>
+    </element>
+    <element xsi:type="node">
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">9</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4200.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">13400.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点9</value>
+        </property>
+    </element>
+    <element xsi:type="node">
+        <property xsi:type="integerCourseProperty">
+            <key>codeId</key>
+            <value xsi:type="xs:int">-1</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点10</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">16600.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>endMode</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>stationType</key>
+            <value xsi:type="xs:string">A</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4000.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">600.0</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isStation</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">10</value>
+        </property>
+    </element>
+    <element xsi:type="magPoint">
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">3400.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>magType</key>
+            <value xsi:type="xs:string">DOUBLE</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>magInterval</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">磁钉点0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">7000.0</value>
+        </property>
+    </element>
+    <element xsi:type="magPoint">
+        <property xsi:type="selectionCourseProperty">
+            <key>magType</key>
+            <value xsi:type="xs:string">DOUBLE</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>magInterval</key>
+            <value xsi:type="xs:int">500</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">磁钉点1</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">1</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4400.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">6000.0</value>
+        </property>
+    </element>
+    <element xsi:type="actionPoint">
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">1800.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">1800.0</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>actionType</key>
+            <value xsi:type="keyValueSetListWrapper">
+                <keyValueProperty>
+                    <key>STOP</key>
+                    <value xsi:type="xs:string">停止:1</value>
+                </keyValueProperty>
+                <keyValueProperty>
+                    <key>AUTO_START</key>
+                    <value xsi:type="xs:string">停止并定时启动:20</value>
+                </keyValueProperty>
+                <keyValueProperty>
+                    <key>SET_SPEED</key>
+                    <value xsi:type="xs:string">速度设置:400</value>
+                </keyValueProperty>
+            </value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">功能点0</value>
+        </property>
+    </element>
+    <element xsi:type="actionPoint">
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">4600.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">1</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">1800.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">功能点1</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>actionType</key>
+            <value xsi:type="keyValueSetListWrapper">
+                <keyValueProperty>
+                    <key>RIGHT_DOWN_LOAD</key>
+                    <value xsi:type="xs:string">右下料:12</value>
+                </keyValueProperty>
+            </value>
+        </property>
+    </element>
+    <element xsi:type="actionPoint">
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">2</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">7400.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">功能点2</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">1800.0</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>actionType</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+    </element>
+    <element xsi:type="actionPoint">
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>actionType</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">功能点3</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">10400.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">3</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">1600.0</value>
+        </property>
+    </element>
+    <element xsi:type="actionPoint">
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">4</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>actionType</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">13400.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">功能点4</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">1600.0</value>
+        </property>
+    </element>
+    <element xsi:type="segment">
+        <property xsi:type="booleanCourseProperty">
+            <key>isColckWise</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">2400.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isLink</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">节点0--节点1</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>arcAngle</key>
+            <value xsi:type="xs:double">90.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>maxSpeed</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:int">1</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">DIRECT</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:int">0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isBidirectional</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+    </element>
+    <element xsi:type="segment">
+        <property xsi:type="integerCourseProperty">
+            <key>maxSpeed</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isColckWise</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isBidirectional</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:int">1</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isLink</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">节点1--节点2</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">DIRECT</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">2807.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">1</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>arcAngle</key>
+            <value xsi:type="xs:double">90.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:int">2</value>
+        </property>
+    </element>
+    <element xsi:type="segment">
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:int">3</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isBidirectional</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isColckWise</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">3200.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isLink</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>arcAngle</key>
+            <value xsi:type="xs:double">90.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">DIRECT</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">2</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>maxSpeed</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:int">2</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">节点2--节点3</value>
+        </property>
+    </element>
+    <element xsi:type="segment">
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">3206.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">DIRECT</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">节点3--节点4</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:int">3</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isLink</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>maxSpeed</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isColckWise</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>arcAngle</key>
+            <value xsi:type="xs:double">90.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">3</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isBidirectional</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:int">4</value>
+        </property>
+    </element>
+    <element xsi:type="segment">
+        <property xsi:type="booleanCourseProperty">
+            <key>isColckWise</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:int">6</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1X</key>
+            <value xsi:type="xs:double">2800.0</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isLink</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>arcAngle</key>
+            <value xsi:type="xs:double">90.0</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">2913.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点5--站点6</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:int">5</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">BEZIER</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">4</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isBidirectional</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper">
+                <keyValueProperty>
+                    <key>FORK_S2E</key>
+                    <value xsi:type="xs:string">FORK_S2E:r</value>
+                </keyValueProperty>
+            </value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>maxSpeed</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2X</key>
+            <value xsi:type="xs:double">3400.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2Y</key>
+            <value xsi:type="xs:double">4800.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1Y</key>
+            <value xsi:type="xs:double">3600.0</value>
+        </property>
+    </element>
+    <element xsi:type="segment">
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:int">6</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点6--站点7</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:int">7</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isLink</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>arcAngle</key>
+            <value xsi:type="xs:double">90.0</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">2800.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>maxSpeed</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isBidirectional</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">DIRECT</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">5</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isColckWise</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+    </element>
+    <element xsi:type="segment">
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">6</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isBidirectional</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">3027.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:int">8</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isColckWise</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点7--站点8</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>maxSpeed</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">DIRECT</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>arcAngle</key>
+            <value xsi:type="xs:double">90.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:int">7</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isLink</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+    </element>
+    <element xsi:type="segment">
+        <property xsi:type="booleanCourseProperty">
+            <key>isLink</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">7</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>maxSpeed</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:int">10</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>arcAngle</key>
+            <value xsi:type="xs:double">90.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">DIRECT</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:int">9</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">3206.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点10--站点9</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isBidirectional</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isColckWise</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+    </element>
+    <element xsi:type="segment">
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isColckWise</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>arcAngle</key>
+            <value xsi:type="xs:double">90.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2Y</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isBidirectional</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">3007.0</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">8</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isLink</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:int">8</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">DIRECT</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:int">9</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2X</key>
+            <value xsi:type="xs:double">NaN</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">站点9--站点8</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>maxSpeed</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+    </element>
+    <element xsi:type="segment">
+        <property xsi:type="angleCourseProperty">
+            <key>arcAngle</key>
+            <value xsi:type="xs:double">90.0</value>
+        </property>
+        <property xsi:type="lengthCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">4244.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">节点4--站点10</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>CONN_TYPE</key>
+            <value xsi:type="xs:string">CIRCULAR</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1X</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2X</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">9</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control2Y</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>control1Y</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isBidirectional</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isLink</key>
+            <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>maxSpeed</key>
+            <value xsi:type="xs:int">300</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>startComponent</key>
+            <value xsi:type="xs:int">4</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>endComponent</key>
+            <value xsi:type="xs:int">10</value>
+        </property>
+        <property xsi:type="booleanCourseProperty">
+            <key>isColckWise</key>
+            <value xsi:type="xs:boolean">true</value>
+        </property>
+    </element>
+    <element xsi:type="vehicle">
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>agvType</key>
+            <value xsi:type="xs:string">DoubleDifferential</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>tcpPort</key>
+            <value xsi:type="xs:int">8880</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">200.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">AGV0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4000.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>battery</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">500.0</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>frontAngle</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">500.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">16600.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>currentSpeed</key>
+            <value xsi:type="xs:string">0</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>IP</key>
+            <value xsi:type="xs:string">192.168.0.11</value>
+        </property>
+        <property xsi:type="colorCourseProperty">
+            <key>displayColor</key>
+            <value xsi:type="xs:int">-26215</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>moveMode</key>
+            <value xsi:type="xs:string">FORWARD</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>status</key>
+            <value xsi:type="xs:string">离线</value>
+        </property>
+        <property xsi:type="relotedAreaCourseProperty">
+            <key>relatedNode</key>
+            <value xsi:type="xs:int">10</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>warningType</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+    </element>
+    <element xsi:type="vehicle">
+        <property xsi:type="coordinateCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">500.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>battery</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">200.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">500.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>IP</key>
+            <value xsi:type="xs:string">192.168.11.1</value>
+        </property>
+        <property xsi:type="colorCourseProperty">
+            <key>displayColor</key>
+            <value xsi:type="xs:int">-16776961</value>
+        </property>
+        <property xsi:type="relotedAreaCourseProperty">
+            <key>relatedNode</key>
+            <value xsi:type="xs:int">9</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>warningType</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4200.0</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>frontAngle</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">1</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">AGV1</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>currentSpeed</key>
+            <value xsi:type="xs:string">0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>tcpPort</key>
+            <value xsi:type="xs:int">8880</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>agvType</key>
+            <value xsi:type="xs:string">DoubleDifferential</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">13400.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>status</key>
+            <value xsi:type="xs:string">离线</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>moveMode</key>
+            <value xsi:type="xs:string">FORWARD</value>
+        </property>
+    </element>
+    <element xsi:type="vehicle">
+        <property xsi:type="integerCourseProperty">
+            <key>tcpPort</key>
+            <value xsi:type="xs:int">8880</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>currentSpeed</key>
+            <value xsi:type="xs:string">0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>moveMode</key>
+            <value xsi:type="xs:string">FORWARD</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">500.0</value>
+        </property>
+        <property xsi:type="relotedAreaCourseProperty">
+            <key>relatedNode</key>
+            <value xsi:type="xs:int">5</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="colorCourseProperty">
+            <key>displayColor</key>
+            <value xsi:type="xs:int">-16776961</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4200.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">200.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>IP</key>
+            <value xsi:type="xs:string">192.168.11.2</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>status</key>
+            <value xsi:type="xs:string">离线</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">500.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">1800.0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">2</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>warningType</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>battery</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>agvType</key>
+            <value xsi:type="xs:string">SingleSteeringEngine</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">AGV2</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>frontAngle</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+    </element>
+    <element xsi:type="vehicle">
+        <property xsi:type="colorCourseProperty">
+            <key>displayColor</key>
+            <value xsi:type="xs:int">-16776961</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>status</key>
+            <value xsi:type="xs:string">离线</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_Y</key>
+            <value xsi:type="xs:double">4400.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>IP</key>
+            <value xsi:type="xs:string">192.168.11.3</value>
+        </property>
+        <property xsi:type="relotedAreaCourseProperty">
+            <key>relatedNode</key>
+            <value xsi:type="xs:int">7</value>
+        </property>
+        <property xsi:type="angleCourseProperty">
+            <key>frontAngle</key>
+            <value xsi:type="xs:double">0.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>battery</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>length</key>
+            <value xsi:type="xs:double">500.0</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>width</key>
+            <value xsi:type="xs:double">500.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>Name</key>
+            <value xsi:type="xs:string">AGV3</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>currentSpeed</key>
+            <value xsi:type="xs:string">0</value>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>id</key>
+            <value xsi:type="xs:int">3</value>
+        </property>
+        <property xsi:type="keyValueSetCourseProperty">
+            <key>Miscellaneous</key>
+            <value xsi:type="keyValueSetListWrapper"/>
+        </property>
+        <property xsi:type="integerCourseProperty">
+            <key>tcpPort</key>
+            <value xsi:type="xs:int">8191</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>height</key>
+            <value xsi:type="xs:double">200.0</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>agvType</key>
+            <value xsi:type="xs:string">DoubleSteeringEngine</value>
+        </property>
+        <property xsi:type="selectionCourseProperty">
+            <key>moveMode</key>
+            <value xsi:type="xs:string">FORWARD</value>
+        </property>
+        <property xsi:type="coordinateCourseProperty">
+            <key>POSITION_X</key>
+            <value xsi:type="xs:double">7400.0</value>
+        </property>
+        <property xsi:type="stringCourseProperty">
+            <key>warningType</key>
+            <value xsi:type="xs:string"></value>
+        </property>
+    </element>
+</model>
