@@ -142,7 +142,7 @@
 									<button class="btn btn-success btn-xs" data-toggle="modal"
 										data-target="#reviseSchool" onclick="getPathId(this)" >修改</button>
 									<button class="btn btn-danger btn-xs" data-toggle="modal"
-										data-target="#deleteSchool">删除</button>
+										data-target="#deleteSchool" onclick="getPathId(this)">删除</button>
 								</div>
 							</div>
 
@@ -290,60 +290,29 @@
 					<div class="data-div">
 						<div class="row tableHeader">
 							<div class="col-xs-1 ">任务ID</div>
-							<div class="col-xs-4">权限名</div>
-							<div class="col-xs-5">描述</div>
+							<div class="col-xs-4">别名</div>
+							<div class="col-xs-5">途径路径</div>
 							<div class="col-xs-2">操作</div>
 						</div>
-						<div class="tablebody">
+						<div class="tablebody" id="task-list">
 							<div class="row">
 								<div class="col-xs-1 ">1</div>
 								<div class="col-xs-4">
-									</span><span>管理员</span>
+									"测试别名"
 								</div>
-								<div class="col-xs-5">管理员具有超年权限</div>
+								<div class="col-xs-5">1,2,3</div>
 								<div class="col-xs-2">
 									<button class="btn btn-success btn-xs" data-toggle="modal"
-										data-target="#changeChar">修改</button>
+										data-target="#changeChar" onclick="getTaskId(this)">修改</button>
 									<button class="btn btn-danger btn-xs" data-toggle="modal"
-										data-target="#deleteChar">删除</button>
+										data-target="#deleteChar" onclick="getTaskId(this)">删除</button>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-xs-1 ">2</div>
-								<div class="col-xs-4">
-									<span>游客</span>
-								</div>
-								<div class="col-xs-5">可以查看信息</div>
-								<div class="col-xs-2">
-									<button class="btn btn-success btn-xs">修改</button>
-									<button class="btn btn-danger btn-xs">删除</button>
-								</div>
-							</div>
-
 						</div>
 
 					</div>
-					<!--页码块-->
-					<footer class="footer">
-						<ul class="pagination">
-							<li><select>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
-							</select> 页</li>
-							<li class="gray">共20页</li>
-							<li><i class="glyphicon glyphicon-menu-left"> </i></li>
-							<li><i class="glyphicon glyphicon-menu-right"> </i></li>
-						</ul>
-					</footer>
-					<!--增加权限弹出窗口-->
+					
+					<!--增加任务弹出窗口-->
 					<div class="modal fade" id="addChar" role="dialog"
 						aria-labelledby="gridSystemModalLabel">
 						<div class="modal-dialog" role="document">
@@ -353,39 +322,47 @@
 										aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
-									<h4 class="modal-title" id="gridSystemModalLabel">添加权限</h4>
+									<h4 class="modal-title" id="gridSystemModalLabel">添加任务</h4>
 								</div>
 								<div class="modal-body">
 									<div class="container-fluid">
-										<form class="form-horizontal">
+										<form class="form-horizontal" id="form3">
 											<div class="form-group ">
-												<label for="sName" class="col-xs-3 control-label">权限名：</label>
+												<label for="sName" class="col-xs-3 control-label">任务ID：</label>
 												<div class="col-xs-6 ">
 													<input type="email" class="form-control input-sm duiqi"
-														id="sName" placeholder="">
+														id="sName" placeholder="" name="TaskID">
 												</div>
 											</div>
 											<div class="form-group">
-												<label for="sLink" class="col-xs-3 control-label">描述：</label>
-												<div class="col-xs-6 ">
+												<label for="sLink" class="col-xs-3 control-label">任务别名：</label>
+													<input type="email" class="form-control input-sm duiqi"
+														id="sName" placeholder="" name="AlisData">
+												<!-- <div class="col-xs-6 ">
 													<textarea class="form-control input-sm duiqi"></textarea>
-												</div>
+												</div> -->
 											</div>
-											<div class="form-group">
-												<label for="sOrd" class="col-xs-3 control-label">系统资源：</label>
-												<div class="col-xs-6">
-													<input type="" class="form-control input-sm duiqi"
-														id="sOrd" placeholder="">
+											<div class="form-group ">
+												<label for="sName" class="col-xs-3 control-label">添加经过路径:</label>
+												<div class="col-xs-8 ">
+												<input type="email" class="form-control input-sm duiqi"
+												id="taskPath" placeholder="">
+												<button type="button" class="btn btn-xs btn-green"
+												id="btn-addTaskPath">添加路径</button>
 												</div>
-											</div>
-
+												
+												</div>
+												<div class="form-group">
+												<label for="sLink" class="col-xs-3 control-label">经过路径:</label>
+												<input class="col-xs-8" id="taskPaths" name="PathList" type="text"  readonly >
+												</div>
 										</form>
 									</div>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-xs btn-white"
-										data-dismiss="modal">取 消</button>
-									<button type="button" class="btn btn-xs btn-green">保 存</button>
+										data-dismiss="modal" onclick="cancle()">取 消</button>
+									<button type="button" class="btn btn-xs btn-green" id="btn-addTask">保 存</button>
 								</div>
 							</div>
 							<!-- /.modal-content -->
@@ -394,7 +371,7 @@
 					</div>
 					<!-- /.modal -->
 
-					<!--修改权限弹出窗口-->
+					<!--修改任务弹出窗口-->
 					<div class="modal fade" id="changeChar" role="dialog"
 						aria-labelledby="gridSystemModalLabel">
 						<div class="modal-dialog" role="document">
@@ -404,39 +381,40 @@
 										aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
-									<h4 class="modal-title" id="gridSystemModalLabel">修改权限</h4>
+									<h4 class="modal-title" id="gridSystemModalLabel">修改任务</h4>
 								</div>
 								<div class="modal-body">
 									<div class="container-fluid">
-										<form class="form-horizontal">
+										<form class="form-horizontal" id="form4">
 											<div class="form-group ">
-												<label for="sName" class="col-xs-3 control-label">权限名：</label>
-												<div class="col-xs-6 ">
-													<input type="email" class="form-control input-sm duiqi"
-														id="sName" placeholder="">
-												</div>
+											<label for="sName" class="col-xs-3 control-label">任务ID:</label>
+											<input class="col-xs-8" id="updateTaskID" name="taskID" type="text"  readonly >
+											</div>
+											<div class="form-group ">
+											<label for="sName" class="col-xs-3 control-label">原任务内容:</label>
+											<input class="col-xs-8" id="oldTaskPaths" name="" type="text"  readonly >
+											</div>
+											<div class="form-group ">
+											<label for="sName" class="col-xs-3 control-label">修改任务为:</label>
+											<div class="col-xs-8 ">
+											<input type="email" class="form-control input-sm duiqi"
+											id="newTaskPath" placeholder="">
+											<button type="button" class="btn btn-xs btn-green"
+											id="btn-addNewPath">添加</button>
+											</div>
+											
 											</div>
 											<div class="form-group">
-												<label for="sLink" class="col-xs-3 control-label">描述：</label>
-												<div class="col-xs-6 ">
-													<textarea class="form-control input-sm duiqi"></textarea>
-												</div>
+											<label for="sLink" class="col-xs-3 control-label">新路径:</label>
+											<input class="col-xs-8" id="newTaskPaths" name="pathList" type="text"  readonly >
 											</div>
-											<div class="form-group">
-												<label for="sOrd" class="col-xs-3 control-label">系统资源：</label>
-												<div class="col-xs-6">
-													<input type="" class="form-control input-sm duiqi"
-														id="sOrd" placeholder="">
-												</div>
-											</div>
-
 										</form>
 									</div>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-xs btn-white"
 										data-dismiss="modal">取 消</button>
-									<button type="button" class="btn btn-xs btn-green">保 存</button>
+									<button type="button" class="btn btn-xs btn-green" id="btn-updateTask">确 认</button>
 								</div>
 							</div>
 							<!-- /.modal-content -->
@@ -445,7 +423,7 @@
 					</div>
 					<!-- /.modal -->
 
-					<!--弹出删除权限警告窗口-->
+					<!--弹出删除任务警告窗口-->
 					<div class="modal fade" id="deleteChar" role="dialog"
 						aria-labelledby="gridSystemModalLabel">
 						<div class="modal-dialog" role="document">
@@ -458,13 +436,13 @@
 									<h4 class="modal-title" id="gridSystemModalLabel">提示</h4>
 								</div>
 								<div class="modal-body">
-									<div class="container-fluid">确定要删除该权限？删除后不可恢复！</div>
+									<div class="container-fluid">确定要删除该任务？删除后不可恢复！</div>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-xs btn-white"
 										data-dismiss="modal">取 消</button>
-									<button type="button" class="btn btn-xs btn-danger">保
-										存</button>
+									<button type="button" class="btn btn-xs btn-danger" id="btn-deleteTask" >确
+										认</button>
 								</div>
 							</div>
 							<!-- /.modal-content -->
@@ -1680,15 +1658,25 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	showPathList();
+	showTaskList();
 });
 
 
-window.getPathNods = function getPathNods(NodeList,PathID){
+window.getPathNods = function getPathNods(NodeList,PathId){
 	var oldPath = document.getElementById("oldPath");
 	oldPath.value = NodeList;
 	var updatePathID = document.getElementById("updatePathID");
-	updatePathID.value = PathID;	
+	updatePathID.value = PathId;	
 }
+
+window.getTaskPaths = function getTaskPaths(PathList,TaskId){
+	console.log(TaskId);
+	var oldTaskPaths = document.getElementById("oldTaskPaths");
+	oldTaskPaths.value = PathList;
+	var updateTaskID = document.getElementById("updateTaskID");
+	updateTaskID.value = TaskId;	
+}
+
 
 function cancle(){
 	window.location.reload();
@@ -1732,6 +1720,43 @@ function showPathList(){
 		}
 	});
 };
+function showTaskList(){
+	$.ajax({
+		"url":"/listTask",
+		"type":"GET",
+		"dataType":"json",
+		"success":function(json){
+			if(json.state == 200){		
+				$("#task-list").empty();
+				var list = json.data;					
+				for(var i=0;i<list.length;i++){
+					console.log(list[i]);
+					var html =	'<div class="row">'
+					+'<div class="col-xs-1 ">#{TaskId}</div>'
+					+'<div class="col-xs-4">#{AlisData}</div>'
+					+'<div class="col-xs-5">#{PathList}</div>'
+					+'<div class="col-xs-2">'
+					+'<button class="btn btn-success btn-xs" data-toggle="modal"data-target="#changeChar" onclick="getTaskPaths(&quot;#{PathList}&quot;,&quot;#{TaskId}&quot;)">修改</button>'
+					+'<button class="btn btn-danger btn-xs" data-toggle="modal"data-target="#deleteChar" onclick="getTaskId(&quot;#{TaskId}&quot;)">删除</button>'
+					+'</div></div>';
+						
+					
+					html = html.replace(/#{TaskId}/g,list[i].taskID);	
+					html = html.replace(/#{AlisData}/g,list[i].alisData);	
+					html = html.replace(/#{PathList}/g,list[i].pathList);
+					
+					
+					$("#task-list").append(html)
+					
+			
+				}	
+			}else{
+				alert(json.message);
+				
+			}
+		}
+	});
+};
 
 
 var nodeList = new Array();
@@ -1745,12 +1770,22 @@ $("#btn-addNode").click(function(){
 $("#btn-addNewNode").click(function(){
 	var nodeID = document.getElementById("newPathNode").value;
 	nodeList.push(nodeID);
-	console.log(nodeList);
 	var pathNods = document.getElementById("newPathNods");
 	pathNods.value = nodeList;
 });
-
-
+var pathList = new Array();
+$("#btn-addTaskPath").click(function(){
+	var pathID = document.getElementById("taskPath").value;
+	pathList.push(pathID);
+	var taskPaths = document.getElementById("taskPaths");
+	taskPaths.value = pathList;
+});
+$("#btn-addNewPath").click(function(){
+	var pathID = document.getElementById("newTaskPath").value;
+	pathList.push(pathID);
+	var taskPaths = document.getElementById("newTaskPaths");
+	taskPaths.value = pathList;
+});
 
 $("#btn-addPath").click(function(){
 	$.ajax({
@@ -1773,6 +1808,28 @@ $("#btn-addPath").click(function(){
 		"error":function(){
 			alert("您填写的信息有误");
 			//location.href="login.html";
+		}
+	});
+});
+
+$("#btn-addTask").click(function(){
+	$.ajax({
+		"url":"/addTask",
+		"data":$("#form3").serialize(),
+		"type":"POST",
+		"dataType":"json",
+		"success":function(json){
+			pathList = new Array();
+			if(json.state == 200){
+				alert("增加成功！");
+				window.location.reload();
+			}else{
+				alert("您修改有误,请参考动态系统查看点和路段情况!");
+				window.location.reload();
+			}
+		},
+		"error":function(){
+			alert("您填写的信息有误");
 		}
 	});
 });
@@ -1801,33 +1858,75 @@ $("#btn-updatePath").click(function(){
 		}
 	});
 });
+
+$("#btn-updateTask").click(function(){
+	$.ajax({
+		"url":"/updateTask",
+		"data":$("#form4").serialize(),
+		"type":"POST",
+		"dataType":"json",
+		"success":function(json){
+			pathList = new Array();
+			if(json.state == 200){
+				alert("修改成功！");
+				window.location.reload();
+			}else{
+				alert("您修改有误,请参考动态系统查看点和路段情况!");
+				window.location.reload();
+			}
+		},
+		"error":function(){
+			alert("您填写的信息有误");
+			//location.href="login.html";
+		}
+	});
+});
+
 var pathID;
 window.getPathId = function getPathId(PathID){
 	pathID = PathID;
 	
 }
-
+var taskID;
+window.getTaskId = function getTaskId(TaskId){
+	taskID = TaskId;
+	
+}
 
 $("#btn-deletePath").click(function(){
-	
 	$.ajax({
-		"url":"/"+pathID+"/delete",
+		"url":"/"+pathID+"/deletePath",
 		"type":"POST",
 		"dataType":"json",
 		"success":function(json){
-			
 			if(json.state == 200){
-				
 				alert("删除成功！");
 				window.location.reload();
-
 			}else{
 				alert(json.message);
 			}
 		},
 		"error":function(){
 			alert("删除出错了!");
-			//location.href="login.html";
+		}
+	});
+});
+
+$("#btn-deleteTask").click(function(){
+	$.ajax({
+		"url":"/"+taskID+"/deleteTask",
+		"type":"POST",
+		"dataType":"json",
+		"success":function(json){
+			if(json.state == 200){
+				alert("删除成功！");
+				window.location.reload();
+			}else{
+				alert(json.message);
+			}
+		},
+		"error":function(){
+			alert("删除出错了!");
 		}
 	});
 });

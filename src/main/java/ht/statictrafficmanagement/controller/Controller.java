@@ -19,16 +19,24 @@ import ht.statictrafficmanagement.base.entity.MapInfo;
 import ht.statictrafficmanagement.base.entity.NodeMessage;
 import ht.statictrafficmanagement.base.entity.PathDataInfo;
 import ht.statictrafficmanagement.base.entity.SegmentMessage;
+import ht.statictrafficmanagement.base.entity.TaskDataInfo;
 import ht.statictrafficmanagement.util.ResponseResult;
 
 @RestController
-public class PathController extends BaseController{
+public class Controller extends BaseController{
 	MapInfo mapInfo = new MapInfo();
 	List<PathDataInfo> pathList = new ArrayList<>();
+	List<TaskDataInfo> taskList = new ArrayList<>();
+	
+	
+	
+	
 	@GetMapping("/map-update")
 	public void readIV() throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException, DocumentException {
 		mapInfo = ParseIV.readXmlFun();
 	}
+	
+	
 	
 	@GetMapping("/listPath")
 	public ResponseResult<List<PathDataInfo>> pathList() {	
@@ -37,26 +45,21 @@ public class PathController extends BaseController{
 		System.err.println(data);
 		return new ResponseResult<List<PathDataInfo>>(SUCCESS,data);
 	}
-	
 	@PostMapping("/addPath")
-	public ResponseResult<Void> addPath(PathDataInfo path,HttpSession session) {
+	public ResponseResult<Void> addPath(PathDataInfo path) {
 		Integer[] nodeListP = path.getNodeList();
 		boolean booNode = findNodeInMap(nodeListP);
 		boolean booSegment = findSegmentInMap(nodeListP);
 		if(booNode==false || booSegment==false) {
 			return new ResponseResult<Void>();
 		}
-		
+		path.setNodeListLen(path.getNodeList().length);
 		pathList.add(path);
 		System.out.println(path);
 		return new ResponseResult<Void>(SUCCESS);
-		
-		
-		
 	}
-	
-	@PostMapping("/{pathID}/delete")
-	public ResponseResult<Void> delete(@PathVariable("pathID")Integer pathID){
+	@PostMapping("/{pathID}/deletePath")
+	public ResponseResult<Void> deletePath(@PathVariable("pathID")Integer pathID){
 		System.err.println(pathID);
 		int i=0;
 		for(PathDataInfo p : pathList) {
@@ -68,7 +71,6 @@ public class PathController extends BaseController{
 		}
 		return new ResponseResult<Void>(SUCCESS);
 	}
-	
 	@PostMapping("/updatePath")
 	public ResponseResult<Void> updatePath(@RequestParam Integer pathID,@RequestParam Integer[] nodeList){	
 		boolean booNode = findNodeInMap(nodeList);
@@ -84,6 +86,7 @@ public class PathController extends BaseController{
 				pathList.remove(k);
 				PathDataInfo newP = new PathDataInfo();
 				newP.setPathID(pathID);
+				newP.setNodeListLen(nodeList.length);
 				newP.setNodeList(nodeList);
 				pathList.add(newP);
 				return new ResponseResult<Void>(SUCCESS);
@@ -92,6 +95,57 @@ public class PathController extends BaseController{
 		}
 		return new ResponseResult<Void>();
 	}
+	
+	
+	@GetMapping("/listTask")
+	public ResponseResult<List<TaskDataInfo>> taskList() {	
+		System.err.println("请求任务列表");
+		List<TaskDataInfo> data = taskList;
+		System.err.println(data);
+		return new ResponseResult<List<TaskDataInfo>>(SUCCESS,data);
+	}
+	@PostMapping("/addTask")
+	public ResponseResult<Void> addTask(TaskDataInfo task) {
+		task.setAlisLen(task.getAlisData().length());
+		task.setPathListLen(task.getPathList().length);
+		taskList.add(task);
+		System.out.println(task);
+		return new ResponseResult<Void>(SUCCESS);
+	}
+	@PostMapping("/{taskID}/deleteTask")
+	public ResponseResult<Void> deleteTask(@PathVariable("taskID")Integer taskID){
+		System.err.println(taskID);
+		int i=0;
+		for(TaskDataInfo p : taskList) {
+			if(p.getTaskID().equals(taskID)) {
+				taskList.remove(i);
+				return new ResponseResult<Void>(SUCCESS);
+			}
+			++i;
+		}
+		return new ResponseResult<Void>();
+	}
+	@PostMapping("/updateTask")
+	public ResponseResult<Void> updateTask(@RequestParam Integer taskID,@RequestParam Integer[] pathList){	
+		int k=0;
+		for(TaskDataInfo p : taskList) {
+			if(p.getTaskID().equals(taskID)) {
+				taskList.remove(k);
+				TaskDataInfo newP = new TaskDataInfo();
+				newP.setTaskID(taskID);
+				newP.setAlisLen(p.getAlisData().length());
+				newP.setAlisData(p.getAlisData());
+				newP.setPathListLen(pathList.length);
+				newP.setPathList(pathList);
+				taskList.add(newP);
+				return new ResponseResult<Void>(SUCCESS);
+			}
+			++k;
+		}
+		return new ResponseResult<Void>();
+	}
+	
+	
 	
 	
 	//传入点集合看map中是否有
