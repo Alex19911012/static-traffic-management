@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import ht.statictrafficmanagement.Dom.ParseIV;
+import ht.statictrafficmanagement.base.entity.AGVInfo;
 import ht.statictrafficmanagement.base.entity.MapInfo;
 import ht.statictrafficmanagement.base.entity.NodeMessage;
 import ht.statictrafficmanagement.base.entity.PathDataInfo;
@@ -106,6 +107,10 @@ public class Controller extends BaseController{
 	}
 	@PostMapping("/addTask")
 	public ResponseResult<Void> addTask(TaskDataInfo task) {
+		boolean checkPath = checkTaskPath(task.getPathList());
+		if(checkPath == false) {
+			return new ResponseResult<Void>();
+		}
 		task.setAlisLen(task.getAlisData().length());
 		task.setPathListLen(task.getPathList().length);
 		taskList.add(task);
@@ -128,13 +133,17 @@ public class Controller extends BaseController{
 	@PostMapping("/updateTask")
 	public ResponseResult<Void> updateTask(@RequestParam Integer taskID,@RequestParam Integer[] pathList){	
 		int k=0;
-		for(TaskDataInfo p : taskList) {
-			if(p.getTaskID().equals(taskID)) {
+		for(TaskDataInfo t : taskList) {
+			if(t.getTaskID().equals(taskID)) {
+				boolean checkPath = checkTaskPath(pathList);
+				if(checkPath == false) {
+					return new ResponseResult<Void>();
+				}
 				taskList.remove(k);
 				TaskDataInfo newP = new TaskDataInfo();
 				newP.setTaskID(taskID);
-				newP.setAlisLen(p.getAlisData().length());
-				newP.setAlisData(p.getAlisData());
+				newP.setAlisLen(t.getAlisData().length());
+				newP.setAlisData(t.getAlisData());
 				newP.setPathListLen(pathList.length);
 				newP.setPathList(pathList);
 				taskList.add(newP);
@@ -144,6 +153,15 @@ public class Controller extends BaseController{
 		}
 		return new ResponseResult<Void>();
 	}
+	
+	@GetMapping("/listAGVInfo")
+	public ResponseResult<List<AGVInfo>> agvInfoList() {
+		System.err.println("请求车辆列表");
+		List<AGVInfo> data = mapInfo.getAgvInfos();
+		System.err.println(data);
+		return new ResponseResult<List<AGVInfo>>(SUCCESS,data);
+	}
+
 	
 	
 	
@@ -197,7 +215,38 @@ public class Controller extends BaseController{
 		}
 	}
 	
-	
+	//传入任务的path集看首位接上
+	public boolean checkTaskPath(Integer[] paths) {
+		
+		Integer nodeIdS = 9999;
+		Integer nodeIdE = 8888;
+		int temp = 0;
+		for(int i = 0;i<paths.length-1;i++) {
+			int k=0;
+			for(PathDataInfo p : pathList) {
+				if(p.getPathID().equals(paths[i])) {
+					nodeIdS = p.getNodeList()[p.getNodeListLen()-1];
+					break;
+				}
+			}
+			for(PathDataInfo p : pathList) {
+				if(p.getPathID().equals(paths[i+1])) {
+					nodeIdE = p.getNodeList()[0];
+					break;
+				}
+			}
+			if(nodeIdS == nodeIdE) {
+				temp +=1;
+				nodeIdS = 9999;
+				nodeIdE = 8888;
+			}
+		}
+		if(temp == paths.length-1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 	
 	
 	

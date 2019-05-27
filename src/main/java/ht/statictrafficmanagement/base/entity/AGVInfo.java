@@ -1,15 +1,21 @@
 package ht.statictrafficmanagement.base.entity;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class AGVInfo {
+public class AGVInfo implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 104508243799874528L;
 	private Integer agvId;//id
 	private String agvName;//Name
 	private Byte agvType;//agvType
 	private Double length;//length
 	private Double width;//width
 	private Double height;//height
-	private Byte[] agvIp;//IP
+	private Byte[] agvIp;//IP asiic
+	private String agvIpI;//10进制ip用于前端显示
 	private Integer udpPort;//tcpPort
 	private Integer nodeId;//relatedNode
 	private Double frontAngle;//frontAngle
@@ -137,16 +143,22 @@ public class AGVInfo {
 	public void setBattery(String battery) {
 		this.battery = battery;
 	}
+	public String getAgvIpI() {
+		return agvIpI;
+	}
+	public void setAgvIpI(String agvIpI) {
+		this.agvIpI = agvIpI;
+	}
 	@Override
 	public String toString() {
 		return "AGVInfo [agvId=" + agvId + ", agvName=" + agvName + ", agvType=" + agvType + ", length=" + length
-				+ ", width=" + width + ", height=" + height + ", agvIp=" + Arrays.toString(agvIp) + ", udpPort="
-				+ udpPort + ", nodeId=" + nodeId + ", frontAngle=" + frontAngle + ", moveMode=" + moveMode
-				+ ", displayColor=" + displayColor + ", miscellaneous=" + miscellaneous + ", currentSpeed="
-				+ currentSpeed + ", POSITION_X=" + POSITION_X + ", POSITION_Y=" + POSITION_Y + ", warningType="
-				+ warningType + ", status=" + status + ", battery=" + battery + "]";
+				+ ", width=" + width + ", height=" + height + ", agvIp=" + Arrays.toString(agvIp) + ", agvIpI="
+				+ agvIpI + ", udpPort=" + udpPort + ", nodeId=" + nodeId + ", frontAngle=" + frontAngle
+				+ ", moveMode=" + moveMode + ", displayColor=" + displayColor + ", miscellaneous=" + miscellaneous
+				+ ", currentSpeed=" + currentSpeed + ", POSITION_X=" + POSITION_X + ", POSITION_Y=" + POSITION_Y
+				+ ", warningType=" + warningType + ", status=" + status + ", battery=" + battery + "]";
 	}
-	
+		
 	
 	
 	

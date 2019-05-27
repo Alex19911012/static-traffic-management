@@ -364,6 +364,8 @@ public static MapInfo readXmlFun() throws DocumentException, ClassNotFoundExcept
                 		
                 		String[] ip = value.split("");
                 		
+                		agvInfo.setAgvIpI(value);
+                		
                 		List<Byte> ipList= new ArrayList<Byte>();
                 		Byte[] result;
                 		Byte temp;
