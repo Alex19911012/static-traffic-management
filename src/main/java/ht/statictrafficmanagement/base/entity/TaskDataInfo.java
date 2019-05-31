@@ -1,9 +1,14 @@
 package ht.statictrafficmanagement.base.entity;
 
 import java.io.Serializable;
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-public class TaskDataInfo implements Serializable{
+
+import ht.statictrafficmanagement.base.UniquenessIDMessage;
+import ht.statictrafficmanagement.base.communication.NeedConfirmMessage;
+
+public class TaskDataInfo extends UniquenessIDMessage implements NeedConfirmMessage,Serializable{
 	/**
 	 * 
 	 */
@@ -47,6 +52,44 @@ public class TaskDataInfo implements Serializable{
 	public String toString() {
 		return "TaskDataInfo [taskID=" + TaskID + ", AlisLen=" + AlisLen + ", AlisData=" + AlisData + ", PathListLen="
 				+ PathListLen + ", PathList=" + Arrays.toString(PathList) + "]";
+	}
+	@Override
+	public void decode(byte[] bytes) {
+		 ByteBuffer byteBuffer = ByteBuffer.allocate(bytes.length);
+	        byteBuffer.put(bytes);
+	        byteBuffer.flip();
+	        messageId = byteBuffer.getLong();
+	        TaskID = byteBuffer.getInt();
+	        AlisLen = byteBuffer.getInt();
+	        
+	        PathListLen = byteBuffer.getInt();
+	        PathList = new Integer[PathListLen];
+	        for (int i = 0; i < PathListLen; i++) {
+	        	PathList[i] = byteBuffer.getInt();
+	        }
+	        
+		
+	}
+	@Override
+	public byte[] encode() {
+		ByteBuffer byteBuffer = ByteBuffer.allocate(8 + AlisLen * 2 + 4 + PathListLen * 4);
+        byteBuffer.putInt(TaskID);
+        byteBuffer.putInt(AlisLen);
+        byteBuffer.put(AlisData.getBytes());
+        byteBuffer.putInt(PathListLen);
+        for (int i = 0; i < PathListLen; i++) {
+            byteBuffer.putInt(PathList[i]);
+        }
+       
+        byte[] data = new byte[byteBuffer.position()];
+        byteBuffer.flip();
+        byteBuffer.get(data);
+        return data;
+	}
+	@Override
+	public byte getMessageType() {
+		
+		return 3;
 	}
 	
 	

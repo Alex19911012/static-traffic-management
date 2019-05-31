@@ -1,8 +1,13 @@
 package ht.statictrafficmanagement.base.entity;
 
 import java.io.Serializable;
+import java.nio.ByteBuffer;
 
-public class MagPoint implements Serializable{
+import ht.statictrafficmanagement.base.MsgType;
+import ht.statictrafficmanagement.base.NotUniquenIDMessage;
+
+
+public class MagPoint extends NotUniquenIDMessage implements Serializable{
 	
 	/**
 	 * 
@@ -51,11 +56,48 @@ public class MagPoint implements Serializable{
 		this.magInterval = magInterval;
 	}
 	@Override
-	public String toString() {
-		return "MagPoint [magPointId=" + magPointId + ", magName=" + magName + ", magType=" + magType + ", xValue="
-				+ xValue + ", yValue=" + yValue + ", magInterval=" + magInterval + "]";
+    public String toString() {
+        return "MagPointMessage{" +
+                "magId=" + magPointId +
+                ", magType=" + magType +
+                ", x=" + xValue +
+                ", y=" + yValue +
+                ", magInterval=" + magInterval +
+                '}';
+    }
+	@Override
+	public void decode(byte[] bytes) {
+		ByteBuffer byteBuf = ByteBuffer.allocate(bytes.length);
+        byteBuf.put(bytes);
+        byteBuf.flip();
+
+        magPointId = byteBuf.getInt();
+        magName = "MagPoint-" + magPointId;
+
+        magType = byteBuf.get();
+        xValue = byteBuf.getDouble();
+        yValue = byteBuf.getDouble();
+        magInterval = byteBuf.getInt();
+		
 	}
-	
+	@Override
+	public byte[] encode() {
+		 ByteBuffer byteBuf = ByteBuffer.allocate(25);
+
+	        byteBuf.putInt(magPointId);
+	        byteBuf.put(magType);
+	        byteBuf.putDouble(xValue);
+	        byteBuf.putDouble(yValue);
+	        byteBuf.putInt(magInterval);
+	        byte[] bytes = new byte[byteBuf.position()];
+	        byteBuf.flip();
+	        byteBuf.get(bytes);
+	        return bytes;
+	}
+	@Override
+	public byte getMessageType() {
+		return MsgType.MAG_NODE_INFO;
+	}	
 	
 	
 }

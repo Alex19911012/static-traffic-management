@@ -1,9 +1,14 @@
 package ht.statictrafficmanagement.base.entity;
 
 import java.io.Serializable;
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-public class ActionPoint implements Serializable{
+import ht.statictrafficmanagement.base.MsgType;
+import ht.statictrafficmanagement.base.NotUniquenIDMessage;
+import ht.statictrafficmanagement.base.Utils;
+
+public class ActionPoint extends NotUniquenIDMessage implements Serializable{
 	/**
 	 * 
 	 */
@@ -52,10 +57,51 @@ public class ActionPoint implements Serializable{
 		this.yValue = yValue;
 	}
 	@Override
-	public String toString() {
-		return "ActionPoint [actionID=" + actionID + ", actionName=" + actionName + ", actionTypes="
-				+ Arrays.toString(actionTypes) + ", actionContents=" + Arrays.toString(actionContents) + ", xValue="
-				+ xValue + ", yValue=" + yValue + "]";
+	    public String toString() {
+	        return "ActionPointMessage{" +
+	                "actionId=" + actionID +
+	                ", actionTypes=" + actionTypes +
+	                ", actionContents=" + actionContents +
+	                ", x=" + xValue +
+	                ", y=" + yValue +
+	                '}';
+	    }
+	 
+	@Override
+	public void decode(byte[] bytes) {
+		ByteBuffer buf = ByteBuffer.allocate(bytes.length);
+        buf.put(bytes);
+        buf.flip();
+
+        actionID = buf.getInt();
+
+       
+        xValue = buf.getDouble();
+        yValue = buf.getDouble();
+		
+	}
+	@Override
+	public byte[] encode() {
+		 ByteBuffer buf = ByteBuffer.allocate(60);
+	        buf.putInt(actionID);
+	        Byte[] actionTypeArray = actionTypes;//20
+	        for (Byte b : actionTypeArray) {
+	            buf.put(b);
+	        }
+	        Integer[] actionContentArray = actionContents;//20
+	        for (int actionContent : actionContentArray) {
+	            buf.putInt(actionContent);
+	        }
+	        buf.putDouble(xValue);
+	        buf.putDouble(yValue);
+	        byte[] bs = new byte[buf.position()];
+	        buf.flip();
+	        buf.get(bs);
+	        return bs;
+	}
+	@Override
+	public byte getMessageType() {
+		 return MsgType.ACTION_NODE_INFO;
 	}
 	
 	

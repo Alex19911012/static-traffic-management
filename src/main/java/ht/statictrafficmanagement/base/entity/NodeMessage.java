@@ -18,10 +18,7 @@ public class NodeMessage extends NotUniquenIDMessage implements Serializable{
 	 */
 	private static final long serialVersionUID = -1137361270412939443L;
 
-	@Override
-    public byte getMessageType() {
-        return MsgType.NODE_INFO;
-    }
+	
 
     private int id;
     private String Name;
@@ -56,50 +53,7 @@ public class NodeMessage extends NotUniquenIDMessage implements Serializable{
         this.codeId = codeId;
     }
 
-    @Override
-    public byte[] encode() {
-        byte[] miscellaneousData = Utils.getByteFromKeyValue(miscellaneous);
-        ByteBuffer byteBuf = ByteBuffer.allocate(59 + miscellaneousData.length);
-        byteBuf.putInt(id);
-        byteBuf.putDouble(POSITION_X);
-        byteBuf.putDouble(POSITION_Y);
-        byteBuf.put(isStation);
-        byteBuf.put(stationType);
-        byteBuf.put(endMode);
-        byteBuf.putDouble(x1);
-        byteBuf.putDouble(y1);
-        byteBuf.putDouble(x2);
-        byteBuf.putDouble(y2);
-        byteBuf.putInt(codeId);
-        byteBuf.put(miscellaneousData);
-        byte[] bytes = new byte[byteBuf.position()];
-        byteBuf.flip();
-        byteBuf.get(bytes);
-        return bytes;
-    }
-
-    @Override
-    public void decode(byte[] bytes) {
-        ByteBuffer byteBuf = ByteBuffer.allocate(bytes.length);
-        byteBuf.put(bytes);
-        byteBuf.flip();
-
-        id = byteBuf.getInt();
-
-        Name = "Node-" + id;
-
-        POSITION_X = byteBuf.getDouble();
-        POSITION_Y = byteBuf.getDouble();
-        isStation = byteBuf.get();
-        stationType = byteBuf.get();
-        endMode = byteBuf.get();
-        x1 = byteBuf.getDouble();
-        y1 = byteBuf.getDouble();
-        x2 = byteBuf.getDouble();
-        y2 = byteBuf.getDouble();
-        codeId = byteBuf.getInt();
-
-    }
+    
 
     public int getid() {
         return id;
@@ -261,6 +215,57 @@ public class NodeMessage extends NotUniquenIDMessage implements Serializable{
 	public void setWidth(double width) {
 		this.width = width;
 	}
+	
+	
+	@Override
+    public byte getMessageType() {
+        return MsgType.NODE_INFO;
+    }
+	
+	@Override
+    public byte[] encode() {
+        byte[] miscellaneousData = Utils.getByteFromKeyValue(miscellaneous);
+        ByteBuffer byteBuf = ByteBuffer.allocate(59 + miscellaneousData.length);
+        byteBuf.putInt(id);
+        byteBuf.putDouble(POSITION_X);
+        byteBuf.putDouble(POSITION_Y);
+        byteBuf.put(isStation);
+        byteBuf.put(stationType);
+        byteBuf.put(endMode);
+        byteBuf.putDouble(x1);
+        byteBuf.putDouble(y1);
+        byteBuf.putDouble(x2);
+        byteBuf.putDouble(y2);
+        byteBuf.putInt(codeId);
+        byteBuf.put(miscellaneousData);
+        byte[] bytes = new byte[byteBuf.position()];
+        byteBuf.flip();
+        byteBuf.get(bytes);
+        return bytes;
+    }
+
+    @Override
+    public void decode(byte[] bytes) {
+        ByteBuffer byteBuf = ByteBuffer.allocate(bytes.length);
+        byteBuf.put(bytes);
+        byteBuf.flip();
+
+        id = byteBuf.getInt();
+
+        Name = "Node-" + id;
+
+        POSITION_X = byteBuf.getDouble();
+        POSITION_Y = byteBuf.getDouble();
+        isStation = byteBuf.get();
+        stationType = byteBuf.get();
+        endMode = byteBuf.get();
+        x1 = byteBuf.getDouble();
+        y1 = byteBuf.getDouble();
+        x2 = byteBuf.getDouble();
+        y2 = byteBuf.getDouble();
+        codeId = byteBuf.getInt();
+
+    }
 
 	@Override
 	public String toString() {

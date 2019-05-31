@@ -23,6 +23,7 @@ public class Utils {
         if (str != null && str.length() > 0) {
             String[] strings = str.split(",");
             int len = strings.length > 8 ? 8 : strings.length;
+            System.out.println(len);
             for (int i = 0; i < len; i++) {
                 try {
                     bytes[i] = Byte.parseByte(strings[i]);

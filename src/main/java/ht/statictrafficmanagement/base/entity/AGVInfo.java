@@ -1,9 +1,16 @@
 package ht.statictrafficmanagement.base.entity;
 
 import java.io.Serializable;
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-public class AGVInfo implements Serializable{
+
+import ht.statictrafficmanagement.base.MsgType;
+import ht.statictrafficmanagement.base.NotUniquenIDMessage;
+import ht.statictrafficmanagement.base.Utils;
+
+
+public class AGVInfo extends NotUniquenIDMessage implements Serializable{
 	/**
 	 * 
 	 */
@@ -149,16 +156,86 @@ public class AGVInfo implements Serializable{
 	public void setAgvIpI(String agvIpI) {
 		this.agvIpI = agvIpI;
 	}
-	@Override
-	public String toString() {
-		return "AGVInfo [agvId=" + agvId + ", agvName=" + agvName + ", agvType=" + agvType + ", length=" + length
-				+ ", width=" + width + ", height=" + height + ", agvIp=" + Arrays.toString(agvIp) + ", agvIpI="
-				+ agvIpI + ", udpPort=" + udpPort + ", nodeId=" + nodeId + ", frontAngle=" + frontAngle
-				+ ", moveMode=" + moveMode + ", displayColor=" + displayColor + ", miscellaneous=" + miscellaneous
-				+ ", currentSpeed=" + currentSpeed + ", POSITION_X=" + POSITION_X + ", POSITION_Y=" + POSITION_Y
-				+ ", warningType=" + warningType + ", status=" + status + ", battery=" + battery + "]";
-	}
-		
+	
+	 @Override
+	    public void decode(byte[] bytes) {
+	        ByteBuffer buf = ByteBuffer.allocate(bytes.length);
+	        buf.put(bytes);
+	        buf.flip();
+
+	        agvId = buf.getInt();
+	        agvName = "AGV-" + agvId;
+	        agvType = buf.get();
+	        length = buf.getDouble();
+	        width = buf.getDouble();
+	        height = buf.getDouble();
+
+//	        byte[] name2 = new byte[20];
+//	        buf.get(name2);
+//	        agvIp = new String(name2); ???
+
+
+	        udpPort = buf.getInt();
+	        nodeId = buf.getInt();
+	        frontAngle = buf.getDouble();
+	        moveMode = buf.get();
+	        displayColor = buf.getInt();
+	    }
+
+	
+	 @Override
+	    public byte getMessageType() {
+	        return MsgType.AGV_INFO;
+	    }
+
+
+	    @Override
+	    public String toString() {
+	        return "AgvInfoMessage{" +
+	                "agvId=" + agvId +
+	                ", agvType=" + agvType +
+	                ", length=" + length +
+	                ", width=" + width +
+	                ", height=" + height +
+	                ", agvIp='" + agvIpI + '\'' +
+	                ", udpPort=" + udpPort +
+	                ", nodeId=" + nodeId +
+	                ", frontAngle=" + frontAngle +
+	                ", moveMode=" + moveMode +
+	                ", displayColor=" + displayColor +
+	                ", miscellaneous='" + miscellaneous + '\'' +
+	                '}';
+	    }
+		@Override
+		public byte[] encode() {
+			byte[] miscellaneousData = Utils.getByteFromKeyValue(miscellaneous);
+	        ByteBuffer buf = ByteBuffer.allocate(70 + miscellaneousData.length);
+
+	        buf.putInt(agvId);
+	        buf.put(agvType);
+	        buf.putDouble(length);
+	        buf.putDouble(width);
+	        buf.putDouble(height);
+	        byte[] ip = new byte[20];
+	        if (agvIpI == null || agvIpI.getBytes().length > 20) {
+	            byte[] t = "null or length > 20".getBytes();
+	            System.arraycopy(t, 0, ip, 0, t.length);
+	        } else {
+	            byte[] t = agvIpI.getBytes();
+	            System.arraycopy(t, 0, ip, 0, t.length);
+	        }
+	        buf.put(ip);
+	        buf.putInt(udpPort);
+	        buf.putInt(nodeId);
+	        buf.putDouble(frontAngle);
+	        buf.put(moveMode);
+	        buf.putInt(displayColor);
+	        buf.put(miscellaneousData);
+	        byte[] bs = new byte[buf.position()];
+	        buf.flip();
+	        buf.get(bs);
+	        return bs;		
+		}		
 	
 	
 	
