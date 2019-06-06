@@ -16,6 +16,8 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import ht.statictrafficmanagement.base.entity.AGVInfo;
 import ht.statictrafficmanagement.base.entity.ActionPoint;
@@ -24,11 +26,15 @@ import ht.statictrafficmanagement.base.entity.MapInfo;
 import ht.statictrafficmanagement.base.entity.NodeMessage;
 import ht.statictrafficmanagement.base.entity.SegmentMessage;
 
+@Component
 public  class ParseIV {
 	
-public static MapInfo readXmlFun() throws DocumentException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
-        
-        
+	@Value("${con.ivParse.url}")
+	String url;
+	
+	public MapInfo readXmlFun() throws DocumentException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+		
+		
        
         //创建一个list 来放多个node等等的对象
         List<NodeMessage> nodes = new ArrayList<NodeMessage>();
@@ -40,7 +46,7 @@ public static MapInfo readXmlFun() throws DocumentException, ClassNotFoundExcept
         
         SAXReader reader = new SAXReader();
         //将XML文件读取为一份document对象
-        Document document = reader.read(new File("src/main/resources/xushuangjia-test.iv"));
+        Document document = reader.read(new File(url));
         //利用Document类中的方法，获取根节点.返回的是Element
         Element rootElement = document.getRootElement();
         //利用Element中的方法，获取根节点下的全部子节点.返回一个List<element> 就是所有node或者segment节点

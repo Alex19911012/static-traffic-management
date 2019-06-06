@@ -235,6 +235,8 @@
 													id="newPathNode" placeholder="">
 												<button type="button" class="btn btn-xs btn-green"
 													id="btn-addNewNode">添加</button>
+												<button type="button" class="btn btn-xs btn-green"
+													id="btn-deleteNewNode">撤销</button>
 											</div>
 											<div class="form-group">
 												<label for="sLink" class="col-xs-3 control-label">新路径:</label>
@@ -391,16 +393,16 @@
 											<div class="form-group ">
 												<label for="sName" class="col-xs-3 control-label">任务ID:</label>
 												<div class="col-xs-8 ">
-												<input class="form-control input-sm duiqi" id="updateTaskID" name="taskID"
-													type="text"   readonly>
-												</div>	
+													<input class="form-control input-sm duiqi"
+														id="updateTaskID" name="taskID" type="text"   readonly>
+												</div>
 											</div>
 											<div class="form-group ">
 												<label for="sName" class="col-xs-3 control-label">原任务内容:</label>
 												<div class="col-xs-8 ">
-												<input class="form-control input-sm duiqi" id="oldTaskPaths" name=""
-													type="text"   readonly>
-												</div>	
+													<input class="form-control input-sm duiqi"
+														id="oldTaskPaths" name="" type="text"   readonly>
+												</div>
 											</div>
 											<div class="form-group ">
 												<label for="sName" class="col-xs-3 control-label">修改任务为:</label>
@@ -409,15 +411,17 @@
 														id="newTaskPath" placeholder="">
 													<button type="button" class="btn btn-xs btn-green"
 														id="btn-addNewPath">添加</button>
+													<button type="button" class="btn btn-xs btn-green"
+														id="btn-deleteNewPath">撤销</button>
 												</div>
 
 											</div>
 											<div class="form-group">
 												<label for="sLink" class="col-xs-3 control-label">新路径:</label>
 												<div class="col-xs-6 ">
-												<input class="form-control input-sm duiqi" id="newTaskPaths" name="pathList"
-													type="text"   readonly>
-												</div>	
+													<input class="form-control input-sm duiqi"
+														id="newTaskPaths" name="pathList" type="text"   readonly>
+												</div>
 											</div>
 										</form>
 									</div>
@@ -482,9 +486,9 @@
 							<div class="col-xs-1">IP</div>
 							<div class="col-xs-1">端口号</div>
 							<div class="col-xs-1">初始位</div>
-							<div class="col-xs-1">方向角</div>
+							<!-- <div class="col-xs-1">方向角</div>
 							<div class="col-xs-1">速度</div>
-							<div class="col-xs-1">状态</div>
+							<div class="col-xs-1">状态</div> -->
 
 						</div>
 						<div class="tablebody" id="agv-list"></div>
@@ -570,7 +574,7 @@
 												<label for="sName" class="col-xs-3 control-label">任务ID：</label>
 												<div class="col-xs-6">
 													<select name="TaskId" id="TIDS">
-														<option>1</option>
+														<option>无</option>
 													</select>
 												</div>
 											</div>
@@ -578,7 +582,23 @@
 												<label for="sLink" class="col-xs-3 control-label">AGVID：</label>
 												<div class="col-xs-6">
 													<select name="agvId" id="AIDS">
-														<option>1</option>
+														<option>无</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group ">
+												<label for="sName" class="col-xs-3 control-label">选路径：</label>
+												<div class="col-xs-6">
+													<select name="pathsIdCheck" id="PIDS" onchange="pathChange()">
+														
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="sLink" class="col-xs-3 control-label">选起点：</label>
+												<div class="col-xs-6">
+													<select name="startNode" id="NIDS">
+														
 													</select>
 												</div>
 											</div>
@@ -586,19 +606,7 @@
 												<label for="sLink" class="col-xs-3 control-label">动作：</label>
 												<div class="col-xs-6">
 													<select name="" id="AT">
-														<option value="0">无操作</option>
-														<option value="1">停止</option>
-														<option value="2">停止然后定时启动</option>
-														<option value="3">速度设定</option>
-														<option value="4">举升</option>
-														<option value="5">降落</option>
-														<option value="6">上料</option>
-														<option value="7">下料</option>
-														<option value="8">左上料</option>
-														<option value="9">左下料</option>
-														<option value="10">右上料</option>
-														<option value="11">右下料</option>
-														<option value="12">牵引销</option>
+														
 													</select>
 												</div>
 											</div>
@@ -612,25 +620,27 @@
 											<div class="form-group ">
 												<label for="sLink" class="col-xs-3 control-label">动作列表:</label>
 												<div class="col-xs-6 ">
-													<input class="form-control input-sm duiqi" id="ATS" name="actionTypes"
-														type="text" readonly>
+													<input class="form-control input-sm duiqi" id="ATS"
+														name="actionTypes" type="text" readonly>
 												</div>
 											</div>
 											<div class="form-group ">
 												<label for="sLink" class="col-xs-3 control-label">补充列表:</label>
 												<div class="col-xs-6 ">
-													<input class="form-control input-sm duiqi" id="ACS" name="actionContents"
-														type="text" readonly>
+													<input class="form-control input-sm duiqi" id="ACS"
+														name="actionContents" type="text" readonly>
 												</div>
 											</div>
 											<button type="button" class="btn btn-xs btn-green"
 												id="btn-addAction">添加动作</button>
+											<button type="button" class="btn btn-xs btn-green"
+														id="btn-deleteAction">撤销动作</button>	
 										</form>
 									</div>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-xs btn-green"
-										id="btn-addTaskInfo">添加任务</button>
+									<!-- <button type="button" class="btn btn-xs btn-green"
+										id="btn-addTaskInfo">添加任务</button> -->
 									<button type="button" class="btn btn-xs btn-white"
 										data-dismiss="modal" onclick="cancle()">取 消</button>
 									<button type="button" class="btn btn-xs btn-green"
@@ -1225,11 +1235,12 @@
 	<script src="js/jquery.nouislider.js"></script>
 
 
-	<script type="text/javascript">
+	<script type="text/javascript" id="123">
 		$(document).ready(function() {
 			showPathList();
 			showTaskList();
 			showAgvList();
+			showActionTypeList()
 		});
 
 		window.getPathNods = function getPathNods(NodeList, PathId) {
@@ -1249,8 +1260,25 @@
 
 		function cancle() {
 			window.location.reload();
+			
+			/* var oldPath;
+			var updatePathID;
+			var oldTaskPaths;
+			var updateTaskID;
+			var nodeList = new Array();
+			var nodeID;
+			var pathNods;
+			var pathList = new Array();
+			var pathID;
+			var taskPaths;
+			var ATArray = new Array();
+			var ACArray = new Array();
+			var AT = document.getElementById("AT").value;
+			var AC = document.getElementById("AC").value;
+			var ATS = document.getElementById("ATS");
+			var ACS ;
+			var taskID; */			
 		}
-
 		function showPathList() {
 			$
 					.ajax({
@@ -1260,6 +1288,7 @@
 						"success" : function(json) {
 							if (json.state == 200) {
 								$("#path-list").empty();
+								$("#PIDS").empty();
 								var list = json.data;
 								for (var i = 0; i < list.length; i++) {
 									console.log(list[i]);
@@ -1278,11 +1307,19 @@
 									html = html.replace(/#{NodeList}/g,
 											list[i].nodeList);
 
-									$("#path-list").append(html)
-
+									$("#path-list").append(html);
+									
 								}
+								var PIDS  = json.data;
+								var sel1 = document.getElementById('PIDS');
+								var str1 = "";
+								
+								for (var i = 0; i < PIDS.length; i++) {	
+								str1 += '<option>' + PIDS[i].pathID + '</option>';
+								}
+								sel1.innerHTML = str1;
 								//$(".add-def:eq(0)").hide();
-							} else {
+							} else{
 								alert(json.message);
 								//退出登录
 
@@ -1350,9 +1387,9 @@
 											+ '<div class="col-xs-1">#{agvIpI}</div>'
 											+ '<div class="col-xs-1">#{udpPort}</div>'
 											+ '<div class="col-xs-1">#{nodeId}</div>'
-											+ '<div class="col-xs-1">#{frontAngle}</div>'
+										/* 	+ '<div class="col-xs-1">#{frontAngle}</div>'
 											+ '<div class="col-xs-1">#{currentSpeed}</div>'
-											+ '<div class="col-xs-1">#{status}</div>'
+											+ '<div class="col-xs-1">#{status}</div>' */
 											+ '</div>';
 
 									html = html.replace(/#{agvId}/g,
@@ -1371,18 +1408,47 @@
 											list[i].udpPort);
 									html = html.replace(/#{nodeId}/g,
 											list[i].nodeId);
-									html = html.replace(/#{frontAngle}/g,
+									/* html = html.replace(/#{frontAngle}/g,
 											list[i].frontAngle);
 									html = html.replace(/#{currentSpeed}/g,
 											list[i].currentSpeed);
 									html = html.replace(/#{status}/g,
-											list[i].status);
+											list[i].status); */
 
 									$("#agv-list").append(html)
 
 								}
 							} else {
 								alert(json.message);
+
+							}
+						}
+					});
+		};
+		
+		function showActionTypeList() {
+			$
+					.ajax({
+						"url" : "/listActionType",
+						"type" : "GET",
+						"dataType" : "json",
+						"success" : function(json) {
+							if (json.state == 200) {
+								var ATS  = json.data;
+								console.log(ATS);
+								var sel1 = document.getElementById('AT');
+								var str1 = "";
+								for (var i = 0; i < ATS.actionTypeS.length; i++) {	
+									var I = ATS.actionTypeI;
+									var S = ATS.actionTypeS;
+								str1 += '<option value="'+I[i]+'">' + S[i] + '</option>';
+								}
+								sel1.innerHTML = str1;
+								pathChange();
+								//$(".add-def:eq(0)").hide();
+							} else{
+								alert(json.message);
+								//退出登录
 
 							}
 						}
@@ -1403,6 +1469,12 @@
 			var pathNods = document.getElementById("newPathNods");
 			pathNods.value = nodeList;
 		});
+		$("#btn-deleteNewNode").click(function() {
+			nodeList.pop();
+			var pathNods = document.getElementById("newPathNods");
+			pathNods.value = nodeList;
+		});
+		
 		var pathList = new Array();
 		$("#btn-addTaskPath").click(function() {
 			var pathID = document.getElementById("taskPath").value;
@@ -1416,6 +1488,15 @@
 			var taskPaths = document.getElementById("newTaskPaths");
 			taskPaths.value = pathList;
 		});
+		$("#btn-deleteNewPath").click(function() {
+			pathList.pop();
+			var taskPaths = document.getElementById("newTaskPaths");
+			taskPaths.value = pathList;
+		});
+		
+		
+		
+		
 		var ATArray = new Array();
 		var ACArray = new Array();
 		$("#btn-addAction").click(function() {
@@ -1428,6 +1509,15 @@
 			ATS.value = ATArray;
 			ACS.value = ACArray;
 
+		});
+		
+		$("#btn-deleteAction").click(function() {
+			ATArray.pop();
+			ACArray.pop();
+			var ATS = document.getElementById("ATS");
+			var ACS = document.getElementById("ACS");
+			ATS.value = ATArray;
+			ACS.value = ACArray;
 		});
 
 		$("#btn-addPath").click(function() {
@@ -1443,14 +1533,16 @@
 						alert("增加成功！");
 						window.location.reload();
 
-					} else {
+					} else if(json.state == 601){
+						alert("您输入的点或点间路段不存在!");
+						window.location.reload();
+					}	else {
 						alert("您修改有误,请参考动态系统查看点和路段情况!");
 						window.location.reload();
 					}
 				},
 				"error" : function() {
-					alert("您填写的信息有误");
-					//location.href="login.html";
+					alert("您填写的信息有误,例:id重复");
 				}
 			});
 		});
@@ -1463,16 +1555,23 @@
 				"dataType" : "json",
 				"success" : function(json) {
 					pathList = new Array();
+					console.log(json.state);
 					if (json.state == 200) {
 						alert("增加成功！");
 						window.location.reload();
-					} else {
-						alert("您修改有误,请参考动态系统查看点和路段情况!");
+					} else if(json.state == 602){
+						alert("您设计的任务中路径不连贯!");
+						window.location.reload();
+					}else if(json.state == 603){
+						alert("您设计的任务中有路径不存在!");
+						window.location.reload();
+					}else {
+						alert("您添加有误,请参考动态系统查看点和路段情况!");
 						window.location.reload();
 					}
 				},
 				"error" : function() {
-					alert("您填写的信息有误");
+					alert("您填写的信息有误,例:id重复");
 				}
 			});
 		});
@@ -1490,13 +1589,16 @@
 						alert("修改成功！");
 						window.location.reload();
 
+					}else if(json.state == 601){
+						alert("您输入的点或点间路段不存在!");
+						window.location.reload();
 					} else {
 						alert("您修改有误,请参考动态系统查看点和路段情况!");
 						window.location.reload();
 					}
 				},
 				"error" : function() {
-					alert("您填写的信息有误");
+					alert("您填写的信息有误,例:id重复");
 					//location.href="login.html";
 				}
 			});
@@ -1513,13 +1615,16 @@
 					if (json.state == 200) {
 						alert("修改成功！");
 						window.location.reload();
+					} else if(json.state == 602){
+						alert("您设计的任务中有路径不存在!");
+						window.location.reload();
 					} else {
 						alert("您修改有误,请参考动态系统查看点和路段情况!");
 						window.location.reload();
 					}
 				},
 				"error" : function() {
-					alert("您填写的信息有误");
+					alert("您填写的信息有误,例:id重复");
 					//location.href="login.html";
 				}
 			});
@@ -1640,8 +1745,39 @@
 				}
 			});
 		}
+		//根据选定的path查出nodes
+		function pathChange() {
+			var pathID = document.getElementById('PIDS').value;
+			$.ajax({
+				"url" : "/" + pathID + "/listPathId",
+				"type" : "GET",
+				"dataType" : "json",
+				"success" : function(json) {
+					if (json.state == 200) {
+						$("#NIDS").empty();
+						var NIDS = json.data;
+						console.log(NIDS);
+						var sel1 = document.getElementById('NIDS');
+						var str1 = "";
+						for (var i = 0; i < NIDS.length; i++) {
+							str1 += '<option>' + NIDS[i] + '</option>';
+						}
+						sel1.innerHTML = str1;
+					} else {
+						alert(json.message);
+					}
+				},
+				"error" : function() {
+					alert("出错了!");
+				}
+			});
+		};
+		
+		
+		
+		
 
-		$("#btn-addTaskInfo").click(function() {
+		/* $("#btn-addTaskInfo").click(function() {
 			$.ajax({
 				"url" : "/addTaskInfo",
 				"data" : $("#form5").serialize(),
@@ -1650,7 +1786,7 @@
 				"success" : function(json) {
 					if (json.state == 200) {
 						alert("增加成功！");
-						
+
 					} else {
 						alert("添加有误,请检查任务和车辆情况!");
 						window.location.reload();
@@ -1660,22 +1796,40 @@
 					alert("您填写的信息有误");
 				}
 			});
-		});
+		}); */
 
 		function sendTaskExc() {
 			$.ajax({
-				"url" : "/sendTaskExec",
-				"type" : "GET",
+				"url" : "/addTaskInfo",
+				"data" : $("#form5").serialize(),
+				"type" : "POST",
 				"dataType" : "json",
 				"success" : function(json) {
 					if (json.state == 200) {
-						alert("执行成功!");
-						window.location.reload();
+						$.ajax({
+							"url" : "/sendTaskExec",
+							"type" : "GET",
+							"dataType" : "json",
+							"success" : function(json) {
+								if (json.state == 200) {
+									alert("执行成功!");
+									window.location.reload();
+								} else {
+									alert(json.message);
+								}
+							}
+						});
+
 					} else {
-						alert(json.message);
+						alert("添加有误,请检查任务和车辆情况!");
+						window.location.reload();
 					}
+				},
+				"error" : function() {
+					alert("您填写的信息有误");
 				}
 			});
+			
 		};
 	</script>
 	<script type="text/javascript">

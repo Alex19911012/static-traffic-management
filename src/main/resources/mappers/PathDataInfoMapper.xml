@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<!-- 这是在写映射 -->
+<!--namespace:匹配的Java接口  -->
+<mapper namespace="ht.statictrafficmanagement.base.mapper.PathDataInfoMapper">
+	<!-- 插入路径数据 -->
+	<!--Integer insert(PathDB pathDB); -->
+	<insert id="insert">
+		insert into PathDataInfo(
+		PathID,NodeList
+		)values (
+		#{PathID},#{NodeList}
+		)			
+	</insert>
+	
+	<!--删除所有路径数据 -->
+	<!-- Integer delete();	 -->
+	<update id="delete">
+		DELETE FROM PathDataInfo WHERE PathID = #{pathID} ;
+	</update>
+		
+	<!-- List<PathDB> getPahtDBList(); -->
+	<select id="getPahtDBList" resultType="ht.statictrafficmanagement.base.vo.PathDB">
+		select * from PathDataInfo;
+	</select>
+		
+		
+	
+	
+	
+	
+	
+
+
+
+
+
+	
+	
+</mapper>

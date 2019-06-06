@@ -18,8 +18,8 @@ public class TaskInfo extends NotUniquenIDMessage implements Serializable{
 	private Integer PathNum;
 	private Integer StartNode;
 	private int agvId;
-	private Byte[] actionTypes;
-	private Integer[] actionContents;
+	private Byte[] actionTypes;//8
+	private Integer[] actionContents;//8*4
 	public Integer getTaskId() {
 		return TaskId;
 	}
@@ -60,9 +60,9 @@ public class TaskInfo extends NotUniquenIDMessage implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "TaskInfo [TaskId=" + TaskId + ", PathNum=" + PathNum + ", StartNode=" + StartNode + ", agvId=" + agvId
-				+ ", actionTypes=" + Arrays.toString(actionTypes).replace("[", "").replace("]", "") + ", actionContents="
-				+ Arrays.toString(actionContents).replace("[", "").replace("]", "") + "]";
+		return "TaskInfo {TaskId=" + TaskId + ", PathNum=" + PathNum + ", StartNode=" + StartNode + ", agvId=" + agvId
+				+ ", actionTypes=" + Arrays.toString(actionTypes).replace("[", "").replace("]", "").replaceAll(" ", "") + ", actionContents="
+				+ Arrays.toString(actionContents).replace("[", "").replace("]", "").replaceAll(" ", "") + "}";
 	}
 	@Override
 	public void decode(byte[] bytes) {
@@ -94,7 +94,7 @@ public class TaskInfo extends NotUniquenIDMessage implements Serializable{
 	}
 	@Override
 	public byte getMessageType() {
-		return MsgType.ROUTE_TASK_INFO;
+		return 5;
 	}
 	
 }

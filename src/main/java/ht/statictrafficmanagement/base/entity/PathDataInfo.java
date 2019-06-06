@@ -27,6 +27,7 @@ public class PathDataInfo extends UniquenessIDMessage implements NeedConfirmMess
 	}
 	public void setNodeList(Integer[] nodeList) {
 		NodeList = nodeList;
+		NodeListLen = NodeList.length;
 	}
 	public Integer getNodeListLen() {
 		return NodeListLen;

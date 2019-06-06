@@ -20,13 +20,14 @@ import java.util.concurrent.locks.ReentrantLock;
  * 消息发送接口
  * Created by wudw on 2017/11/02.
  */
-
+@Component
 public class MessageSender implements ISender {
     private DatagramSocket socket;
     @Autowired
     MessageHelper messageHelper;
-    //@Autowired
-    Configure configure = new Configure();
+    @Autowired
+    Configure configure;
+    
     int SEND_PACKET_MAX_LEN;
     Lock lock = new ReentrantLock();
     private static Logger logger = LoggerFactory.getLogger(MessageSender.class);
@@ -74,6 +75,7 @@ public class MessageSender implements ISender {
     }
 
     public boolean send(Message message, String host, int port) throws IOException {
+    	System.out.println(configure);
         SEND_PACKET_MAX_LEN = configure.getSend_packet_max_length() - 100;
         InetAddress address = InetAddress.getByName(host);
         if (port > 65535 || port < 0) {

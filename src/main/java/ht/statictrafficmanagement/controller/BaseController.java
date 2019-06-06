@@ -20,6 +20,22 @@ public abstract class BaseController {
 	 */
 	public static final Integer SUCCESS = 200;
 	
+	//路径中的点或线段不存在//路径中存在不连贯路径
+	public static final Integer State1 = 601;
+	
+	public static final Integer State2 = 602;
+	//任务的路径中有不存在的路径
+	public static final Integer State3 = 603;
+	
+	//修改异常
+	public static final Integer State6 = 606;
+	//删除异常
+	public static final Integer State7 = 607;
+	//未知异常
+	public static final Integer State8 = 608;
+	
+	
+	
 	/**
 	 * 从Session获取当前登录的用户id
 	 * @param session
@@ -63,5 +79,6 @@ public abstract class BaseController {
 //		return rr;
 //	}
 //	
+	
 
 }

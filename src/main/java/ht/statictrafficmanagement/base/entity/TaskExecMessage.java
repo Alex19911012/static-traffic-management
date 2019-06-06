@@ -29,7 +29,7 @@ public class TaskExecMessage extends UniquenessIDMessage implements NeedConfirmM
 	}
 	@Override
 	public String toString() {
-		return "TaskExecMessage [TaskNum=" + TaskNum + ", TaskList=" + TaskList + "]";
+		return "TaskExecMessage {TaskNum=" + TaskNum + ", TaskList=" + TaskList + "}";
 	}
 	@Override
 	public void decode(byte[] bytes) {

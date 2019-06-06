@@ -50,7 +50,7 @@ public class TaskDataMessage extends UniquenessIDMessage implements NeedConfirmM
 	}
 	@Override
 	public String toString() {
-		return "TaskDataMessage [TaskNum=" + TaskNum + ", TaskList=" + Arrays.toString(TaskList.toArray())  +", PathNum=" + PathNum +  ", PathList=" +Arrays.toString(PathList.toArray()) + "]";
+		return "TaskDataMessage {TaskNum=" + TaskNum + ", TaskList=" + Arrays.toString(TaskList.toArray())  +", PathNum=" + PathNum +  ", PathList=" +Arrays.toString(PathList.toArray()) + "}";
 	}
 	@Override
 	public void decode(byte[] bytes) {

@@ -35,6 +35,7 @@ public class TaskDataInfo extends UniquenessIDMessage implements NeedConfirmMess
 	}
 	public void setAlisData(String alisData) {
 		AlisData = alisData;
+		AlisLen  = AlisData.length();
 	}
 	public Integer getPathListLen() {
 		return PathListLen;
@@ -47,11 +48,12 @@ public class TaskDataInfo extends UniquenessIDMessage implements NeedConfirmMess
 	}
 	public void setPathList(Integer[] pathList) {
 		PathList = pathList;
+		PathListLen = PathList.length;
 	}
 	@Override
 	public String toString() {
 		return "TaskDataInfo [taskID=" + TaskID + ", AlisLen=" + AlisLen + ", AlisData=" + AlisData + ", PathListLen="
-				+ PathListLen + ", PathList=" + Arrays.toString(PathList) + "]";
+				+ PathListLen + ", PathList=" + Arrays.toString(PathList).replace("[", "").replace("]", "").replaceAll(" ", "") + "]";
 	}
 	@Override
 	public void decode(byte[] bytes) {
